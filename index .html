@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Costeñita - Miel Pura del Chaco</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/favicon.ico">
+    <!-- Iconos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Barra de aviso superior -->
+    <div class="top-banner">
+        <p>🚚 Envíos locales y departamentales | El sabor de lo nuestro</p>
+    </div>
+
+    <!-- Cabecera principal: Logo a la izquierda, Menú al centro, Botones a la derecha -->
+    <header class="main-header">
+        <div class="header-container">
+            
+            <!-- 1. Extremo Izquierdo: Logotipo -->
+            <a href="#" class="brand-logo">
+                <img src="img/logo.png" alt="Costeñita" onerror="this.src='251646.jpg'">
+            </a>
+
+            <!-- 2. Centro: Navegación Horizontal en PC / Acordeón Desplegable en Móvil -->
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="#" class="nav-link active" data-categoria="todos">TODOS LOS PRODUCTOS</a></li>
+                    <li><a href="#" class="nav-link" data-categoria="plastico">ENVASE PLÁSTICO</a></li>
+                    <li><a href="#" class="nav-link" data-categoria="vidrio">ENVASE VIDRIO</a></li>
+                    <li><a href="#mayorista" class="nav-link">VENTA MAYORISTA</a></li>
+                    <li><a href="#nosotros" class="nav-link">QUIÉNES SOMOS</a></li>
+                    <li><a href="#contacto" class="nav-link">CONTACTO</a></li>
+                </ul>
+            </nav>
+
+            <!-- 3. Extremo Derecho: Modo Oscuro, Carrito y Menú Móvil -->
+            <div class="header-right">
+                <!-- Botón Modo Claro / Oscuro -->
+                <button class="theme-btn" id="btnThemeToggle" title="Cambiar tema claro/oscuro" aria-label="Cambiar modo oscuro o claro">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <!-- Botón Carrito de Compras -->
+                <button class="cart-btn" id="btnAbrirCarrito" title="Ver carrito">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cartCount" class="cart-badge">0</span>
+                </button>
+
+                <!-- Botón Menú Hamburguesa para Móvil -->
+                <button class="menu-toggle-btn" id="btnMenuToggle" aria-label="Abrir menú">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Título de sección de catálogo -->
+    <main class="container">
+        <div class="section-title">
+            <h2 id="tituloCategoria">NUESTRAS MIELES</h2>
+            <div class="title-underline"></div>
+        </div>
+
+        <!-- Grilla de productos generada con JavaScript/jQuery -->
+        <section id="catalogoGrid" class="products-grid"></section>
+
+        <!-- Sección Venta Mayorista -->
+        <section id="mayorista" class="info-card">
+            <h3>📦 Venta Mayorista y Baldes</h3>
+            <p>Distribuimos a tiendas, farmacias y negocios en Tarija y a nivel departamental. Disponemos de precios
+                especiales por docena y baldes de 5 kg y 25 kg.</p>
+            <a href="https://wa.me/59168460448?text=Hola%20Costeñita,%20solicito%20información%20y%20precios%20para%20venta%20mayorista"
+                target="_blank" class="btn-primary">Consultar Catálogo Mayorista</a>
+        </section>
+
+        <!-- Sección Quiénes Somos -->
+        <section id="nosotros" class="about-section">
+            <div class="about-header">
+                <h2>¿QUIÉNES SOMOS?</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <!-- 3 Columnas de Texto Informativo -->
+            <div class="about-grid">
+                <article class="about-card">
+                    <div class="about-icon"><i class="fa-solid fa-seedling"></i></div>
+                    <h3>Nuestro Origen</h3>
+                    <p>En <strong>COSTEÑITA</strong> somos un emprendimiento familiar de Villa Montes, Tarija, dedicado a la venta de miel pura y natural. Desde hace más de 12 años trabajamos con compromiso y dedicación para ofrecer un producto de calidad que conserve el sabor y la esencia de nuestra tierra.</p>
+                </article>
+
+                <article class="about-card">
+                    <div class="about-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+                    <h3>Apicultores Locales</h3>
+                    <p>Nuestra miel proviene principalmente de apicultores locales de Villa Montes, con quienes trabajamos de manera colaborativa para apoyar la producción de nuestra región. Seleccionamos cuidadosamente la miel que ofrecemos a nuestros clientes, buscando mantener su pureza, sabor y calidad natural.</p>
+                </article>
+
+                <article class="about-card">
+                    <div class="about-icon"><i class="fa-solid fa-heart"></i></div>
+                    <h3>Propósito y Tradición</h3>
+                    <p>En <strong>COSTEÑITA</strong> creemos en el valor de lo natural, el trabajo familiar y el apoyo a los productores locales. Nuestro propósito es llevar a cada hogar una miel en la que nuestros clientes puedan confiar y, al mismo tiempo, dar a conocer la riqueza apícola de Villa Montes y del Chaco tarijeño.</p>
+                </article>
+            </div>
+
+           <!-- Galería de Fotos Reales de Costeñita -->
+            <div class="about-gallery">
+                <div class="gallery-item">
+                    <img src="img/galeria-apiarios.jpg" alt="Apiarios en el Monte Chaqueño">
+                    <span>Apiarios en el Monte Chaqueño</span>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="img/galeria-trabajo-campo.jpg" alt="Cuidado y Manejo Apícola">
+                    <span>Cuidado y Manejo Apícola</span>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="img/galeria-inspeccion.jpg" alt="Revisión de Bastidores">
+                    <span>Revisión de Bastidores</span>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="img/galeria-panal-puro.jpg" alt="Panales 100% Puros">
+                    <span>Panales 100% Puros</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer id="contacto" class="main-footer">
+        <div class="container footer-content">
+            <div>
+                <h4>Costeñita</h4>
+                <p>Miel Pura del Chaco - El sabor de lo nuestro.</p>
+            </div>
+            <div>
+                <h4>Contacto y Pedidos</h4>
+                <p><i class="fa-brands fa-whatsapp"></i> +591 68460448</p>
+                <p><i class="fa-solid fa-truck"></i> Envíos locales y departamentales</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Costeñita. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botón flotante directo de WhatsApp -->
+    <a href="https://wa.me/59168460448?text=Hola%20Costeñita,%20quisiera%20hacer%20una%20consulta"
+        class="whatsapp-float" target="_blank" title="Chatear con Costeñita">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">¿Te ayudo?</span>
+    </a>
+
+    <!-- Modal Lateral (Drawer) del Carrito de Compras -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Tu Pedido</h3>
+                <button id="btnCerrarCarrito" class="close-btn">&times;</button>
+            </div>
+            <div id="cartItemsList" class="cart-items">
+                <!-- Se llena dinámicamente con jQuery -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total-row">
+                    <span>Total a pagar:</span>
+                    <strong id="cartTotalMonto">Bs 0.00</strong>
+                </div>
+                <button id="btnEnviarWhatsApp" class="btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Pedir por WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="cartOverlay" class="cart-overlay"></div>
+
+    <!-- Scripts: jQuery 3.7.1 y app.js -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
